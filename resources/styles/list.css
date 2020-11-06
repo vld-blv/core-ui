@@ -216,6 +216,10 @@
     max-width: 0px; /*hack to set width less than cells content */
 }
 
+.dev-collection.compact .grid-header-column {
+    max-width: none;
+}
+
 .header-column-wrp{
     display: flex;
     align-items: center;
