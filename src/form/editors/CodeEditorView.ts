@@ -97,6 +97,7 @@ export default formRepository.editors.Code = BaseEditorView.extend({
         this.editor.setValue(this.value || '');
         if (this.readonly) {
             this.__setReadonly(this.readonly);
+            this.__destroyToolbar();
         }
     },
 
@@ -181,5 +182,9 @@ export default formRepository.editors.Code = BaseEditorView.extend({
         if (this.options.showMode === showModes.button) {
             this.__setEditBtnText();
         }
+    },
+
+    __destroyToolbar() {
+        this.editor.toolbar.destroy();
     }
 });
